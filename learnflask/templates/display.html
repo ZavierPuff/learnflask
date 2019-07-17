@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block posts %}
+    <p>Click <a href="/logout">here</a> to logout.</p>
+    <h1> Posts:</h1>
+    <ul>
+    {% for post in posts %}
+        <li>
+            {{ post.author.name }}:{{ post.title }},{{ post.description }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
